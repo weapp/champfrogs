@@ -56,7 +56,7 @@ const cards = [
 
 			<div class="flex flex-wrap -m-4 items-center" id="items">
 
-			<div class="lg:w-1/3 sm:w-1/2 p-4 w-full" data-no-draggable data-id="top">
+			<div class="lg:w-1/3 sm:w-1/2 px-8 sm:px-4 py-4 w-full" data-no-draggable data-id="top">
 				<div class="flex relative">
 				<div class="px-8 py-10 relative z-10 w-full  bg-gradient-to-r from-lime-400 to-emerald-600">
 					<h2 class="font-extrabold text-transparent text-5xl text-white text-center">TOP</h2>
@@ -66,7 +66,7 @@ const cards = [
 
 			{ cards.map((card)=> (<Card {...card}></Card>)) }
 
-			<div class="lg:w-1/3 sm:w-1/2 p-4 w-full" data-no-draggable data-id="bottom">
+			<div class="lg:w-1/3 sm:w-1/2 px-8 sm:px-4 py-4 w-full" data-no-draggable data-id="bottom">
 				<div class="flex relative">
 				<div class="px-8 py-10 relative z-10 w-full  bg-gradient-to-r from-rose-400 to-pink-600">
 					<h2 class="font-extrabold text-transparent text-5xl text-white text-center">BOTTOM</h2>
@@ -90,6 +90,7 @@ const cards = [
 		{
 			filter: '[data-no-draggable]',
 			animation: 150,
+			handle: '.handle',
 
 			// Event when you move an item in the list or between lists
 			onMove: function (evt, originalEvent) {
